@@ -76,8 +76,8 @@
   .hero-inner{position:relative;z-index:2;will-change:transform,opacity}
   .hero-eyebrow{margin-bottom:30px}
   h1{font-family:"Fraunces",serif;font-weight:700;font-size:clamp(2.7rem,8vw,6rem);line-height:.96;letter-spacing:-.01em}
-  h1 .ln{display:block;overflow:hidden}
-  h1 .ln > span{display:block;transform:translateY(110%)}
+  h1 .ln{display:block;overflow:hidden;padding-bottom:.12em}
+  h1 .ln > span{display:block;transform:translateY(120%)}
   h1 .aka{display:block;overflow:visible;font-size:clamp(1rem,2.6vw,1.5rem);font-weight:400;font-style:italic;color:var(--dim);margin:6px 0;-webkit-text-fill-color:var(--dim)}
   .hero-tag{margin-top:30px;max-width:30ch;font-family:"Fraunces",serif;font-style:italic;font-weight:500;font-size:clamp(1.25rem,3vw,1.7rem);line-height:1.3;color:var(--cream)}
   .hero-cta{margin-top:40px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
@@ -137,7 +137,7 @@
   /* ---- WORK video cards ---- */
   .vgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
   @media(max-width:780px){.vgrid{grid-template-columns:1fr}}
-  .vcard{position:relative;aspect-ratio:16/10;border-radius:8px;overflow:hidden;background:var(--bg-3);border:1px solid var(--line);display:block}
+  .vcard{position:relative;aspect-ratio:3/2;border-radius:8px;overflow:hidden;background:var(--bg-3);border:1px solid var(--line);display:block}
   .vcard .vph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:16px;color:var(--dim)}
   .vph .frame-no{font-family:"Geist",sans-serif;font-size:11px;font-weight:600;letter-spacing:.2em;color:var(--gold);opacity:.85}
   .vph .vph-cat{font-family:"Fraunces",serif;font-style:italic;font-size:1.4rem;color:var(--cream)}
@@ -157,7 +157,7 @@
 
   /* ---- REELS (hover pop) ---- */
   #reels{background:var(--bg-2)}
-  .reel-row{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+  .reel-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
   @media(max-width:980px){.reel-row{grid-template-columns:repeat(3,1fr)}}
   @media(max-width:560px){.reel-row{grid-template-columns:repeat(2,1fr)}}
   .reel{position:relative;aspect-ratio:9/16;border-radius:8px;overflow:hidden;background:var(--bg-3);border:1px solid var(--line);cursor:pointer;padding:0;transition:transform .35s var(--ease),opacity .35s var(--ease),box-shadow .35s var(--ease)}
@@ -180,6 +180,16 @@
   .svc .name{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(1.5rem,3.4vw,2.1rem)}
   .svc .desc{font-size:.95rem;color:var(--dim);max-width:30ch;text-align:right}
   @media(max-width:780px){.svc{grid-template-columns:auto 1fr}.svc .desc{display:none}}
+
+  /* ---- GEAR / KIT ---- */
+  .gear-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  @media(max-width:900px){.gear-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.gear-grid{grid-template-columns:1fr}}
+  .gear{border:1px solid var(--line);border-radius:8px;padding:22px 22px 24px;background:var(--bg-3);transition:border-color .3s var(--ease),transform .3s var(--ease)}
+  .gear:hover{border-color:var(--gold);transform:translateY(-3px)}
+  .gear .g-cat{font-family:"Geist",sans-serif;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px;margin-bottom:12px}
+  .gear .g-cat::before{content:"";width:16px;height:1px;background:var(--gold);opacity:.7}
+  .gear .g-item{font-family:"Fraunces",serif;font-size:1.15rem;color:var(--cream);line-height:1.4}
 
   /* ---- CONTACT ---- */
   #contact{text-align:center}
@@ -216,7 +226,7 @@
 <nav id="nav">
   <a href="#top" class="brand">Btech Wala <b>Photographer</b></a>
   <div class="nav-links">
-    <a href="#about">About</a><a href="#work">Work</a><a href="#reels">Reels</a><a href="#services">Services</a><a href="#contact">Contact</a>
+    <a href="#about">About</a><a href="#work">Work</a><a href="#reels">Reels</a><a href="#services">Services</a><a href="#gear">Gear</a><a href="#contact">Contact</a>
   </div>
 </nav>
 
@@ -372,6 +382,25 @@
       <div class="svc" data-reveal><div class="n">04</div><div class="name">UGC &amp; Brand Shoots</div><div class="desc">Scroll-stopping creator content &amp; brand films built to convert.</div></div>
       <div class="svc" data-reveal><div class="n">05</div><div class="name">Travel Films</div><div class="desc">Journeys, landscapes and the road — captured the way it felt.</div></div>
       <div class="svc" data-reveal><div class="n">06</div><div class="name">Collaborations</div><div class="desc">Open to brands, creators &amp; automotive collabs across India.</div></div>
+      <div class="svc" data-reveal><div class="n">07</div><div class="name">AI Edits</div><div class="desc">AI-assisted retouching, restyling &amp; generative visuals — modern, scroll-stopping edits.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GEAR / KIT ===== -->
+<section class="block" id="gear">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <div class="eyebrow">Frame 04 — The Kit</div>
+      <h2 class="sec-title grad">Gear I shoot with.</h2>
+      <p class="sub">The tools behind the frames — always evolving.</p>
+    </div>
+    <div class="gear-grid">
+      <div class="gear" data-reveal><div class="g-cat">Cameras</div><div class="g-item">Sony A7S III · Sony A7 IV</div></div>
+      <div class="gear" data-reveal><div class="g-cat">Drone</div><div class="g-item">DJI drone — cinematic aerials</div></div>
+      <div class="gear" data-reveal><div class="g-cat">Stabilizer</div><div class="g-item">Gimbal — movement, stabilized</div></div>
+      <div class="gear" data-reveal><div class="g-cat">Edit Machine</div><div class="g-item">MacBook M4 Pro — the edit machine</div></div>
+      <div class="gear" data-reveal><div class="g-cat">Software</div><div class="g-item">DaVinci Resolve · Photoshop · Lightroom</div></div>
     </div>
   </div>
 </section>
